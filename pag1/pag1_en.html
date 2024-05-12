@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #cc0000; 
+			background-color: #ffd9d9; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #cc0000; 
+            border-radius: 8px;
+            background-color: #ffd9d9; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Cars</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Characters</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character lightning-mcqueen">
+                    <img src="media\Lightning_McQueen.png" alt="Lightning McQueen" class="character-image">
+                    <h2>Lightning McQueen</h2>
+                    <p>	Lightning McQueen, the charismatic racing car, is the main character in "Cars". Initially ambitious and focussed on himself, 
+						he learns the values of friendship and community during an unexpected stopover in Radiator Springs. 
+						McQueen undergoes a profound personal development, from an egocentric racing driver to one who values the importance of authenticity and cohesion. 
+						His distinctive red livery and quest for success make him an iconic character in the world of animated cars.</p>
+                </div>
+
+                <div class="character mater">
+                    <img src="media\Mater.png" alt="Mater" class="character-image">
+                    <h2>Mater</h2>
+                    <p>	Mater, affectionately known as "Tow Mater", is a run-down but warm-hearted tow truck and close friend of Lightning McQueen 
+						in the world of "Cars". With its rusty exterior and down-to-earth charm, Mater epitomises the authenticity of rural life in Radiator Springs. 
+						in Radiator Springs. His naive and carefree personality always spreads good humour. 
+						Mater plays a crucial role in Lightning's personal development by teaching him 
+						that true friendship and values are not defined by outward appearances, but by genuine connection.</p>
+                </div>
+
+                <div class="character sally">
+                    <img src="media\Sally.png" alt="Sally" class="character-image">
+                    <h2>Sally</h2>
+                    <p>	Sally, a Porsche 911 Carrera, is not only an outstanding lawyer, but also the love of Lightning McQueen's life. 
+						Her arrival in Radiator Springs not only brings glamour to the town, but also plays a decisive role in McQueen's personal development.
+						Sally helps McQueen get back on his feet and together they open a hotel at the end of the film.</p>
+                </div>
+
+                <div class="character doc-hudson">
+                    <img src="media\Doc-Hudson.webp" alt="Doc Hudson" class="character-image" width="250" height="120">
+                    <h2>Doc Hudson</h2>
+                    <p>	Doc Hudson, aka "The Judge", is a legendary racer and former Piston Cup champion. 
+						His wise leadership and hidden racing past make him an important mentor for Lightning McQueen at Radiator Springs.
+						Hudson has already won 3 Piston Cups but had to leave the race track forever after an accident.</p>
+                </div>
+
+                <div class="character chick-hicks">
+                    <img src="media\Chick-Hicks.webp" alt="Chick Hicks" class="character-image" width="250" height="120">
+                    <h2>Chick Hicks</h2>
+                    <p>	Chick Hicks, a green racing car, is a ruthless rival of Lightning McQueen. 
+						His fierce competitive spirit and willingness to resort to unethical means make him a challenging opponent on the racetrack.
+						In the end, he also wins the Piston Cup, which McQuenn has given up, but McQueen is still the centre of attention.</p>
+                </div>
+
+                <div class="character the-king">
+                    <img src="media\The-King.webp" alt="The King" class="character-image" width="250" height="120">
+                    <h2>The King</h2>
+                    <p>	The King, also known as Strip "The King" Weathers, is an experienced Piston Cup Champion with a blue and yellow exterior. 
+						As a role model for fairness and respect, he embodies the values of racing and becomes an inspiring figure for Lightning McQueen. 
+						In the final race, he gets into an accident, but McQueen pushes him over the finish line so he can complete his last race.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Plot</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+				<p>	After a triple tie in the last race for the Piston Cup, Lightning McQueen, a talking NASCAR car, 
+					has to go to Los Angeles for a tiebreaker race. However, on the way, he gets separated from his transport truck at night. 
+					Consequently, he has to find his way to California alone. Lost (as all real NASCAR cars lack headlights), 
+					he ends up on Route 66 in Radiator Springs, where he accidentally damages the only main street in the town. He is sentenced to repair it. 
+					While he's busy with the repairs, he befriends Mater, a tow truck. Additionally, he falls in love with Sally, a Porsche. 
+					She explains to him how vibrant Radiator Springs used to be but lost all its customers due to a new interstate and disappeared from the map. 
+					Sally was a successful lawyer in L.A. She escaped the city life and lives here because of the impressive landscape. 
+					There's also conflict with Doc Hudson, who was once a famous race car himself. After a serious accident, 
+					his racing team no longer accepted him, which is why he initially views race cars like Lightning with contempt. 
+					When the road is fixed, Lightning has befriended all the town's residents and actually doesn't want to leave. 
+					However, the media and his racing team find him again because Doc Hudson called them and take him to the big race. 
+					Eventually, Mack and the media catch up to McQueen to take him to the upcoming race in Los Angeles. 
+					During the race, Lightning is initially distracted and falls far behind, as he keeps thinking about Radiator Springs. 
+					Suddenly, he realizes that his friends are with him in the pit and by his side. With their support, 
+					he takes the lead and is close to winning when his competitor, "The King," for whom this is the last race before retirement, 
+					is forced out of the race. Instead of claiming the already secured victory for himself, 
+					Lightning stops and pushes the heavily damaged King across the finish line so he can finish his last race. 
+					Thus, he loses the Piston Cup but gains the respect of all the other cars and prevents the same fate from befalling the King as it did Doc Hudson. 
+					After Lightning opens his new racing headquarters in Radiator Springs, the town becomes known and popular again. 
+					Additionally, he and Sally reopen the once very popular auto-hotel "Wheel Well" together.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

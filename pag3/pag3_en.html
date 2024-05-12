@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Age</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #33B5FF;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #0066cc; 
+			background-color: #d9f3ff; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #0066cc; 
+            border-radius: 8px;
+            background-color: #d9f3ff; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Ice Age</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Characters</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character manny">
+                    <img src="media\Manny.webp" alt="Manny" class="character-image" height="15%" width="15%">
+                    <h2>Manny</h2>
+                    <p>	Manny, the good-natured mammoth, is the wise leader of the group, combining his huge stature with a protective nature. 
+						Through the challenges of the Ice Age, Manny is challenged not only physically but also emotionally. 
+						His journey leads not only to an understanding of community, but also to him overcoming his deepest fears and traumas. 
+						With a huge heart and impressive strength, Manny shows that true leadership lies in compassion and caring.</p>
+                </div>
+
+                <div class="character sid">
+                    <img src="media\Sid.webp" alt="Sid" class="character-image" height="8%" width="8%">
+                    <h2>Sid</h2>
+                    <p>	Sid, the clumsy sloth, brings a unique dynamic to the group with his naive nature and endearing clumsiness. 
+						His initial lack of self-confidence is overcome by his adventures and friendships, 
+						and he proves to be an essential building block of group harmony. 
+						Sid teaches us that sometimes those who are different bring a refreshing perspective and zest for life.</p>
+                </div>
+
+                <div class="character diego">
+                    <img src="media\Diego.webp" alt="Diego" class="character-image" height="12%" width="12%">
+                    <h2>Diego</h2>
+                    <p>	Diego, the initially suspicious sabre-toothed tiger, develops into a complex character, 
+						between his hunting instincts and his loyalty to friends. 
+						His transformation reflects that even seemingly insurmountable differences can be bridged by common goals and genuine connections. 
+						The combination of keen senses and a warm heart makes Diego a fascinating member of the group.</p>
+                </div>
+
+                <div class="character scrat">
+                    <img src="media\Scrat.png" alt="Scrat" class="character-image" height="10%" width="10%">
+                    <h2>Scrat</h2>
+                    <p>	Scrat, the hapless squirrel, is an iconic element of the films. 
+						In his relentless pursuit of his acorn, slapstick comedy and mayhem are created. 
+						Scrat is not only a comical character, but also symbolises the constant drive for something unattainable, 
+						which many viewers can identify with.</p>
+                </div>
+
+				<div class="character crash-eddie">
+                    <img src="media\Crash and Eddie.webp" alt="Crash und Eddie" class="character-image" height="10%" width="10%">
+                    <h2>Crash and Eddie</h2>
+                    <p>	Crash and Eddie, the playful possum brothers, add to the humour of the films with their childlike recklessness and adventurous energy. 
+						Their chaotic escapades and childish pranks are not only fun, but also a reminder 
+						that even in dangerous times, the joy of light-heartedness should not be lost. 
+						Her lively manner perfectly complements the ensemble of characters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Plot</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+                <p>	The film is set around 20,000 years ago during the last ice age, and winter is just around the corner. 
+					While the "sabre-toothed squirrel" Scrat feverishly tries to bury his beloved acorn and gets into one mess after another during the film, the actual plot of the film takes place. 
+					one mess after another during the film, the actual film action takes place. Because of the approaching ice age winter 
+					the entire Ice Age animal world sets off for the south. Only the solitary mammoth Manfred (Manni) 
+					resists the peer pressure and migrates north. Since his family was killed by humans years ago and he has not managed to successfully defend them, 
+					successfully defend them, he avoids company and is a grumpy loner.
+					Giant sloth and pain in the arse Sid is left alone by his family, as he is every year. When he is chased by two brontotherias, 
+					which he has eaten one of the last dandelions before winter, he is rescued by Manfred. From then on, he joins the mammoth, 
+					much to his chagrin. Meanwhile, a pack of sabre-toothed tigers led by their leader Soto attack a horde of Stone Age people, 
+					to kidnap and kill the chief's baby in revenge for killing members of the pack. But the chieftain's mother is able to 
+					her child to safety from the sabre-toothed tiger Diego just in time and escape with the baby. Diego follows up. 
+					The sabre-toothed tigers eventually have to flee, but Soto orders Diego to find the baby and bring it to him. The father, 
+					whose clan is on the way to the Iceberg Pass, on the other side of which they have a settlement, notices the disappearance and sets off with his people in search of the baby, 
+					notices the disappearance and sets off with his men in search of his family. By chance, Manni and Sid discover the Fraum, 
+					who, cornered by Diego, had jumped down a waterfall and is now close to death. 
+					She hands her little son ashore to the two baffled animals before she is swept away again by the torrent of water.
+					As ordered by Soto, Diego tries to bring the human child back to eat. Under the pretence of wanting to help Manni and Sid, 
+					to help Manni and Sid return the child to his fellow species, Diego tries to join them. In fact, he wants to lead them to an ambush, 
+					where his comrades take the child and, having learnt about him and Sid from Diego, try to kill Manni. 
+					Despite Manni's doubts, he is eventually taken in as a tracker by Manni and Sid, who are at odds with each other.
+					On their way back to the humans, the three disparate animals have to survive various adventures - such as fighting off the brontotherms 
+					or dodos (which exterminate themselves through clumsy and overconfident behaviour and food envy) 
+					and defy the pitfalls of cold and ice, lava and fire. In the process, Manni, Sid and Diego have to build up trust in each other, 
+					which proves to be no easy task in a world full of hunters and hunted. Among other things, they have to flee from falling ice 
+					into a cave and experience an adventurous slide. There is also the prospect of meeting the humans, 
+					who have apparently - as they have seen in cave drawings - invented special weapons to kill the animals, 
+					does not make their situation any easier. When Manni discovers a mammoth family in the cave paintings, 
+					he sadly remembers the dramatic death of his family, which he can now finally come to terms with. 
+					He is apparently finally able to forgive and takes the little boy, whose father would suffer the same fate if the baby died, to his heart, 
+					which seems to touch Sid in particular. Meanwhile, the father, on his way to the human settlement 
+					behind the iceberg pass, the father is still searching for his family, but seems to be losing hope.
+					Shortly before the planned ambush, after Manni had saved his life at the risk of his own life in Vulcanism, 
+					Diego confesses his original treacherous intentions and sides with his companions. 
+					Using a deceptive manoeuvre, they manage to lure the pack into an ambush. Together they successfully defy the attack by the other sabre-toothed tigers. 
+					Sid manages to save the baby from Zeke, one of the sabre-toothed tigers. Soto wants to kill Manni, as he has already planned to do with the pack, 
+					but Diego stands in his way and a fight ensues, during which Soto gains the upper hand and throws Diego against a rock. 
+					He then turns his attention to Manny. As Soto prepares to launch a deadly attack, Diego jumps in and saves Manny's life, seriously injured. 
+					In an attempt to kill Diego and grab the child, Soto is thrown against a rock with icicles by Manni, causing them to fall and stab Soto. 
+					and stab Soto to death. The rest of the pack flees. Diego explains to Manni and Sid that people protect each other in a herd 
+					and that is why he saved Manni. He then apparently dies in the presence of his friends and the baby.
+					In the end, the child is returned to the father, who had already given up hope and searched extensively for his family, 
+					whereupon Manni and Sid say goodbye and promise not to forget the baby. The father gives Manni a necklace of the baby as a memento. 
+					It turns out that Diego has survived and recovered. He also says goodbye to the baby and is greeted joyfully by the others. 
+					The companions Manni, Diego and Sid head south together. 20,000 years later, Scrat, trapped in a block of ice with his acorn, is washed up on a beach. 
+					is washed up on a beach. Before he can free himself completely from the thawing block of ice, the acorn is washed away. 
+					Scrat notices a coconut and tries to bury it, but accidentally triggers a volcanic eruption.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

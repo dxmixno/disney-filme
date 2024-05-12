@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #cc0000; 
+			background-color: #ffd9d9; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #cc0000; 
+            border-radius: 8px;
+            background-color: #ffd9d9; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Indietro</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Cars</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Personaggi</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character lightning-mcqueen">
+                    <img src="media\Lightning_McQueen.png" alt="Lightning McQueen" class="character-image">
+                    <h2>Lightning McQueen</h2>
+                    <p>	Saetta McQueen, la carismatica auto da corsa, è il protagonista di "Cars". Inizialmente ambizioso e concentrato su se stesso, 
+						impara i valori dell'amicizia e della comunità durante una sosta inaspettata a Radiator Springs. 
+						McQueen subisce una profonda evoluzione personale, passando da un pilota egocentrico a uno che apprezza l'importanza dell'autenticità e della coesione. 
+						La sua caratteristica livrea rossa e la ricerca del successo lo rendono un personaggio iconico nel mondo delle auto animate.</p>
+                </div>
+
+                <div class="character mater">
+                    <img src="media\Mater.png" alt="Mater" class="character-image">
+                    <h2>Mater</h2>
+                    <p>	Cricchetto, affettuosamente noto come "Tow Mater", è un carro attrezzi malandato ma dal cuore tenero e amico intimo di Saetta McQueen 
+						nel mondo di "Cars". Con la sua carrozzeria arrugginita e il suo fascino semplice, Cricchetto incarna l'autenticità della vita rurale di Radiator Springs. 
+						a Radiator Springs. La sua personalità ingenua e spensierata diffonde sempre il buonumore. 
+						Cricchetto svolge un ruolo fondamentale nella crescita personale di Saetta, insegnandogli che la vera amicizia e i valori non sono definiti 
+						che la vera amicizia e i veri valori non sono definiti dalle apparenze, ma da un legame autentico.</p>
+                </div>
+
+                <div class="character sally">
+                    <img src="media\Sally.png" alt="Sally" class="character-image">
+                    <h2>Sally</h2>
+                    <p>	Sally, una Porsche 911 Carrera, non è solo un avvocato eccezionale, ma anche l'amore della vita di Saetta McQueen. 
+						Il suo arrivo a Radiator Springs non solo porta glamour alla città, ma gioca anche un ruolo decisivo nella crescita personale di McQueen.
+						Sally aiuta McQueen a rimettersi in piedi e insieme aprono un hotel alla fine del film.</p>
+                </div>
+
+                <div class="character doc-hudson">
+                    <img src="media\Doc-Hudson.webp" alt="Doc Hudson" class="character-image" width="250" height="120">
+                    <h2>Doc Hudson</h2>
+                    <p>	Doc Hudson, detto "Il Giudice", è un pilota leggendario ed ex campione della Piston Cup. 
+						La sua saggia leadership e il suo passato da corridore nascosto lo rendono un importante mentore per Saetta McQueen a Radiator Springs.
+						Hudson ha già vinto 3 Piston Cup, ma ha dovuto lasciare definitivamente la pista dopo un incidente.</p>
+                </div>
+
+                <div class="character chick-hicks">
+                    <img src="media\Chick-Hicks.webp" alt="Chick Hicks" class="character-image" width="250" height="120">
+                    <h2>Chick Hicks</h2>
+                    <p>	Chick Hicks, un'auto da corsa verde, è uno spietato rivale di Saetta McQueen. 
+						Il suo feroce spirito competitivo e la sua disponibilità a ricorrere a mezzi poco etici lo rendono un avversario ostico in pista.
+						Alla fine vince anche la Piston Cup, a cui McQuenn ha rinunciato, ma McQueen è ancora al centro dell'attenzione.</p>
+                </div>
+
+                <div class="character the-king">
+                    <img src="media\The-King.webp" alt="The King" class="character-image" width="250" height="120">
+                    <h2>The King</h2>
+                    <p>	The King, noto anche come Strip "The King" Weathers, è un esperto campione di Piston Cup dall'aspetto blu e giallo. 
+						Modello di correttezza e rispetto, incarna i valori delle corse e diventa una figura di ispirazione per Saetta McQueen.
+						Nell'ultima gara ha un incidente, ma McQueen lo spinge a tagliare il traguardo in modo che possa completare la sua ultima corsa.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Trama</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+				<p>	Dopo un pareggio a tre nell'ultima gara per la "Piston Cup", "Saetta McQueen", un'auto NASCAR parlante, 
+					a Los Angeles per la gara decisiva. Durante il tragitto, però, viene separato dal suo camion di trasporto durante la notte. Deve quindi trovare la strada per la California da solo. 
+					Disorientato (come tutte le vere auto NASCAR, non ha i fari), finisce sulla Route 66 a "Radiator Springs", dove distrugge accidentalmente l'unica strada del villaggio. 
+					Viene condannato a ripararla. Mentre è impegnato a farlo, fa amicizia con Hook, un carro attrezzi.
+					Si innamora anche di Sally, una Porsche. Lei gli spiega quanto fosse vivace Radiator Springs, ma ha perso tutti i suoi clienti a causa di una nuova interstatale ed è scomparsa dalla mappa. 
+					Sally era un avvocato di successo a L.A. È fuggita dalla vita della grande città e vive qui per il paesaggio impressionante. C'è anche un conflitto con Doc Hudson, 
+					che era un famoso pilota di auto da corsa. Dopo un grave incidente, non è stato più accettato dalla sua scuderia, motivo per cui inizialmente vede con disprezzo le auto da corsa come la Lightning. 
+					Quando la strada è terminata, Saetta ha fatto amicizia con tutti gli abitanti del villaggio e non vuole più andarsene. Ma i media e la sua squadra da corsa lo ritrovano, 
+					Doc Hudson li ha chiamati e lo vanno a prendere per la grande gara. Alla fine Mack e i media raggiungono McQueen per portarlo a Los Angeles per la gara. 
+					Durante la gara, Saetta all'inizio non è concentrato e rimane indietro perché continua a pensare a Radiator Springs. Improvvisamente, però, si rende conto 
+					che i suoi amici sono ai box per sostenerlo. Grazie a questo sostegno, passa in testa e sta per vincere quando il suo rivale "King", per il quale questa è l'ultima gara prima del ritiro, viene espulso dalla gara, 
+					viene espulso dalla gara. Invece di rivendicare la vittoria già certa, Saetta si ferma e spinge King, gravemente danneggiato, oltre il traguardo, in modo che possa concludere la sua ultima gara. 
+					Sebbene perda la Piston Cup, si guadagna il rispetto di tutte le altre auto e impedisce al Re di subire la stessa sorte di Doc Hudson.
+					Dopo che Saetta apre il suo nuovo quartier generale a Radiator Springs, il luogo diventa di nuovo famoso e popolare. 
+					Insieme a Sally, riapre anche l'hotel per auto "Wheel Well", un tempo molto popolare.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #0BB200;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #00cc00; 
+			background-color: #d9ffd9; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #00cc00; 
+            border-radius: 8px;
+            background-color: #d9ffd9; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Zurück</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Shrek</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Charaktere</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character shrek">
+                    <img src="media\Shrek.png" alt="Shrek" class="character-image" width="9%" height="9%">
+                    <h2>Shrek</h2>
+                    <p>	Shrek, der grüne Oger, lebt abgeschieden im Sumpf und genießt seine Einsamkeit. 
+						Hinter seiner raubeinigen Fassade verbirgt sich jedoch ein Herz aus Gold. 
+						Als er unfreiwillig in ein Abenteuer verwickelt wird, entdeckt er nicht nur die Bedeutung von Freundschaft, sondern auch, 
+						dass Liebe in den ungewöhnlichsten Formen erscheinen kann. Shrek durchläuft eine bemerkenswerte Entwicklung, 
+						von einem eigenbrötlerischen Einzelgänger zu einem Helden, der seine wahren Werte findet.</p>
+                </div>
+
+                <div class="character fiona">
+                    <img src="media\Fiona.png" alt="Fiona" class="character-image" width="8%" height="8%">
+                    <h2>Fiona</h2>
+                    <p>	Prinzessin Fiona ist eine einzigartige Figur im Märchenuniversum. 
+						Tagsüber erscheint sie als klassische Schönheit, aber in der Nacht verwandelt sie sich in einen Oger. 
+						Trotz ihrer königlichen Pflichten ist Fiona eine eigenständige und entschlossene Frau. 
+						Ihre Reise mit Shrek führt nicht nur zu einer unkonventionellen Liebesgeschichte, sondern auch zu einer Befreiung von gesellschaftlichen Erwartungen. 
+						Fiona repräsentiert die Botschaft, dass wahre Liebe auf Authentizität und Selbstakzeptanz basiert.</p>
+                </div>
+
+                <div class="character donkey">
+                    <img src="media\Donkey.png" alt="Donkey" class="character-image" width="7%" height="7%">
+                    <h2>Donkey</h2>
+                    <p>	Esel, mit seiner quirligen Persönlichkeit und schnellen Sprechweise, wird Shreks unerwarteter und treuer Begleiter. 
+						Seine humorvolle Art bringt nicht nur Leichtigkeit in die Geschichte, sondern unterstreicht auch die Bedeutung von Vielfalt und Akzeptanz. 
+						Esel lehrt uns, dass Freundschaft keine Grenzen kennt und dass auch ungewöhnliche Allianzen zu den stärksten Verbindungen führen können. 
+						Sein Charakter ist ein lebendiges Beispiel für Lebensfreude und Positivität.</p>
+                </div>
+
+                <div class="character lord farquaad">
+                    <img src="media\Lord Farquaad.png" alt="Lord Farquaad" class="character-image" width="10%" height="10%">
+                    <h2>Lord Farquaad</h2>
+                    <p>	Lord Farquaad, der machthungrige Herrscher mit geringer Körpergröße, strebt danach, durch die Heirat mit Prinzessin Fiona König zu werden. 
+						Sein Charakter fügt dem Film eine Prise Absurdität hinzu, da seine egozentrische Natur und absurden Entscheidungen zu komischen Situationen führen. 
+						Farquaads kurzsichtige Ambitionen werden auf humorvolle Weise kritisiert, und er dient als klassischer Märchenantagonist mit einer modernen Wendung.</p>
+                </div>
+
+                <div class="character chick-hicks">
+                    <img src="media\Dragon.png" alt="Drache" class="character-image" width="15%" height="15%">
+                    <h2>Drache</h2>
+                    <p>	Die Drachin, zunächst als Bedrohung eingeführt, entwickelt sich im Verlauf der Geschichte zu einer unerwarteten Verbündeten von Shrek und Esel. 
+						Ihre Wandlung von einem furchterregenden Ungeheuer zu einem Symbol der Liebe unterstreicht die zentrale Botschaft des Films, 
+						dass Vorurteile oft trügerisch sind und echte Schönheit im Inneren liegt. 
+						Die Drachin repräsentiert die Idee, dass jeder, ungeachtet äußerlicher Erscheinungen, die Fähigkeit zur Liebe und zum Mitgefühl besitzt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Handlung</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+                <p>	Der Film beginnt mit dem Eintauchen der Kamera in ein Märchenbuch, das die Geschichte einer Prinzessin erzählt, auf der ein schrecklicher, 
+					nicht genau genannter Fluch liegt. Sie ist in einem Turm gefangen und wird von einem feuerspeienden Drachen bewacht, 
+					so lange bis ein tapferer Ritter sie befreit und sie durch den Kuss der wahren Liebe vom Fluch befreit.
+					Der Held der Geschichte, Shrek, ist ein Oger. Daher wird er von seinen Zeitgenossen als groß, dumm, hässlich und vor allem gefährlich empfunden. 
+					Er lebt in einem Sumpf und liebt es, allein zu sein. Als Lord Farquaad, der Herrscher des Landes „DuLoc“, alle Fabelwesen vertreibt 
+					und sie in den Sumpf von Shrek umsiedelt, schließt dieser mit dem Lord einen Handel ab: Er darf seinen Sumpf wieder für sich alleine haben, 
+					wenn es ihm gelingt, die schöne Prinzessin Fiona aus ihrem von einem Drachen bewachten Turm zu befreien. Farquaad verspricht sich dadurch insgeheim 
+					eine Heirat mit der Prinzessin, die ihn zum König machen würde. Bei dieser Mission wird Shrek von einem sprechenden Esel begleitet. 
+					Zusammen erleben die beiden so unterschiedlichen Lebewesen verschiedene Abenteuer. Es gelingt ihnen, Fiona aus dem Turm zu befreien 
+					und vor dem Drachen zu retten. Fiona selbst ist empört, dass Lord Farquaad Shrek als Handlanger gesandt hat, anstatt sie selbst heldenhaft zu retten. 
+					Auf dem Rückweg nach DuLoc muss Shrek sie anfangs tragen, da sie sich weigert, mitzukommen. Dass sich auf dem Weg sowohl Shrek und Fiona als auch Esel 
+					und die Drachendame ineinander verlieben, macht die Reise nicht einfacher. Shrek weiß zu diesem Zeitpunkt nicht, dass auf Fiona ein Fluch liegt, 
+					der sie nach Einbruch der Nacht selbst zum Oger werden lässt. In der Nacht, bevor Fiona Lord Farquaad treffen soll, entdeckt Esel, 
+					dass Fiona sich nach Sonnenuntergang in einen Oger verwandelt. Esel versucht, Fiona zu überzeugen, bei Shrek zu bleiben. Shrek hört durch die Tür 
+					von der Unterhaltung nur, dass Fiona sagt, niemand könnte ein Monster lieben. Shrek denkt, dass Fiona von ihm spricht, da er nicht wissen kann, 
+					dass Fiona sich selbst als Monster bezeichnet. Wütend bringt er Farquaad kurz nach Sonnenaufgang zu Fiona, die wieder Menschengestalt angenommen hat. 
+					Shrek verabschiedet sich von Fiona mit den Worten, dass sie recht habe und sich niemand in ein Monster verlieben könnte. Fiona wiederum denkt, 
+					er spräche von ihr, obwohl er von sich selbst spricht. Unglücklich beschließt Fiona, Farquaad zu heiraten. Nachdem Esel Shrek das Missverständnis erklärt hatte, 
+					verhindern die beiden mit Hilfe des Drachen die Hochzeit. Farquaad, der Shrek hinrichten und Fiona zurück in den Turm sperren will, 
+					wird von dem Drachen verschlungen. Durch den darauf folgenden Kuss der wahren Liebe zwischen Fiona und Shrek wird der Fluch, der auf Fiona liegt, aufgehoben. 
+					Sie nimmt endgültig die Gestalt einer Ogerfrau an und heiratet Shrek. </p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Age</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #33B5FF;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #0066cc; 
+			background-color: #d9f3ff; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #0066cc; 
+            border-radius: 8px;
+            background-color: #d9f3ff; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Indietro</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Ice Age</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Personaggi</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character manny">
+                    <img src="media\Manny.webp" alt="Manny" class="character-image" height="15%" width="15%">
+                    <h2>Manny</h2>
+                    <p>	Manny, il mammut bonario, è il saggio leader del gruppo, che combina la sua enorme statura con una natura protettiva. 
+						Attraverso le sfide dell'era glaciale, Manny viene messo alla prova non solo fisicamente ma anche emotivamente. 
+						Il suo viaggio lo porta non solo a comprendere la comunità, ma anche a superare le sue paure e i suoi traumi più profondi. 
+						Con un cuore enorme e una forza impressionante, Manny dimostra che la vera leadership risiede nella compassione e nella cura.</p>
+                </div>
+
+                <div class="character sid">
+                    <img src="media\Sid.webp" alt="Sid" class="character-image" height="8%" width="8%">
+                    <h2>Sid</h2>
+                    <p>	Sid, il goffo bradipo, porta una dinamica unica nel gruppo con la sua natura ingenua e la sua simpatica goffaggine. 
+						La sua iniziale mancanza di fiducia in se stesso viene superata dalle avventure e dalle amicizie, 
+						e si rivela un elemento essenziale per l'armonia del gruppo. 
+						Sid ci insegna che a volte chi è diverso porta con sé una prospettiva rinfrescante e una voglia di vivere.</p>
+                </div>
+
+                <div class="character diego">
+                    <img src="media\Diego.webp" alt="Diego" class="character-image" height="12%" width="12%">
+                    <h2>Diego</h2>
+                    <p>	Diego, la tigre dai denti a sciabola inizialmente sospettosa, diventa un personaggio complesso, 
+						tra il suo istinto di caccia e la sua lealtà verso gli amici. 
+						La sua trasformazione riflette che anche le differenze apparentemente insormontabili possono essere colmate da obiettivi comuni e legami genuini. 
+						La combinazione di sensi acuti e cuore caldo rende Diego un membro affascinante del gruppo.</p>
+                </div>
+
+                <div class="character scrat">
+                    <img src="media\Scrat.png" alt="Scrat" class="character-image" height="10%" width="10%">
+                    <h2>Scrat</h2>
+                    <p>	Scrat, lo sfortunato scoiattolo, è un elemento iconico dei film. 
+						L'incessante ricerca della sua ghianda crea una comicità slapstick e un'atmosfera di caos. 
+						Scrat non è solo un personaggio comico, ma simboleggia anche la costante ricerca di qualcosa di irraggiungibile, 
+						con cui molti spettatori possono identificarsi.</p>
+                </div>
+
+				<div class="character crash-eddie">
+                    <img src="media\Crash and Eddie.webp" alt="Crash und Eddie" class="character-image" height="10%" width="10%">
+                    <h2>Crash e Eddie</h2>
+                    <p>	Crash ed Eddie, i fratelli opossum giocherelloni, contribuiscono all'umorismo del film con la loro spericolatezza infantile e la loro energia avventurosa. 
+						Le loro fughe caotiche e i loro scherzi infantili non sono solo divertenti, ma ci ricordano che anche in tempi pericolosi 
+						che anche in tempi pericolosi, la gioia della spensieratezza non deve andare perduta. 
+						Il suo modo di fare vivace si integra perfettamente con l'insieme dei personaggi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Trama</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+                <p>	Il film è ambientato circa 20.000 anni fa, durante l'ultima era glaciale, e l'inverno è alle porte. 
+					Mentre lo "scoiattolo dai denti a sciabola" Scrat cerca febbrilmente di seppellire la sua amata ghianda e si caccia in un pasticcio dopo l'altro durante il film, si svolge la vera e propria trama del film. 
+					Durante il film, un pasticcio dopo l'altro, si svolge l'azione vera e propria del film. A causa dell'avvicinarsi dell'inverno glaciale 
+					l'intero mondo animale dell'era glaciale parte per il sud. Solo il solitario mammut Manfred (Manni) resiste alla pressione dei suoi simili e migra verso sud. 
+					resiste alla pressione dei coetanei e migra verso nord. Poiché la sua famiglia è stata uccisa dagli umani anni fa e lui non è riuscito a difenderla con successo, 
+					a difenderli con successo, evita la compagnia ed è un solitario scontroso.
+					Il bradipo gigante e rompiscatole Sid viene lasciato solo dalla sua famiglia, come ogni anno. Quando viene inseguito da due brontoteri, 
+					che hanno mangiato uno degli ultimi denti di leone prima dell'inverno, viene salvato da Manfred. Da quel momento in poi, si unisce ai mammut, 
+					con grande dispiacere. Nel frattempo, un branco di tigri dai denti a sciabola guidate dal loro capo Soto attacca un'orda di persone dell'Età della Pietra, 
+					per rapire e uccidere il figlio del capo per vendicarsi dell'uccisione dei membri del branco. Ma la madre del capo tribù riesce a 
+					il suo bambino appena in tempo per sfuggire alla tigre dai denti a sciabola Diego e fuggire con il piccolo. Diego lo segue. 
+					Le tigri dai denti a sciabola alla fine devono fuggire, ma Soto ordina a Diego di trovare il bambino e di portarglielo. Il padre, 
+					il cui clan è in viaggio verso il Passo dell'Iceberg, al di là del quale hanno un insediamento, si accorge della scomparsa e parte con i suoi uomini alla ricerca della sua famiglia, 
+					si accorge della scomparsa e parte con i suoi uomini alla ricerca della famiglia. Per caso, Manni e Sid scoprono i Fraum, 
+					che, messa alle strette da Diego, si è buttata giù da una cascata ed è ormai prossima alla morte. 
+					La donna consegna il figlioletto a terra ai due sconcertati animali prima di essere nuovamente travolta dal torrente d'acqua.
+					Come ordinato da Soto, Diego cerca di riportare il bambino umano a mangiare. Con la scusa di voler aiutare Manni e Sid, 
+					per aiutare Manni e Sid a restituire il bambino ai suoi simili, Diego cerca di unirsi a loro. In realtà, vuole condurli in un'imboscata, 
+					dove i suoi compagni prendono il bambino e, avendo saputo di lui e Sid da Diego, cercano di uccidere Manni. 
+					Nonostante i dubbi di Manni, alla fine viene assunto come segugio da Manni e Sid, che sono in contrasto tra loro.
+					Durante il viaggio di ritorno verso gli umani, i tre animali più disparati devono sopravvivere a varie avventure, come la lotta contro i brontotermi 
+					(che si sterminano da soli a causa di un comportamento maldestro e troppo sicuro di sé e dell'invidia per il cibo) e sfidare le insidie del freddo e del ghiaccio, della lava e del fuoco. 
+					e sfidare le insidie del freddo e del ghiaccio, della lava e del fuoco. Nel frattempo, Manni, Sid e Diego devono costruire la fiducia reciproca, 
+					che si rivela un compito non facile in un mondo pieno di cacciatori e cacciati. Tra le altre cose, devono fuggire da una caduta di ghiaccio in una grotta. 
+					in una grotta e sperimentare un avventuroso scivolo. C'è anche la prospettiva di incontrare gli umani, 
+					che, a quanto pare, come hanno visto nei disegni delle caverne, hanno inventato armi speciali per uccidere gli animali, 
+					non rende la loro situazione più facile. Quando Manni scopre una famiglia di mammut nelle pitture rupestri, 
+					ricorda con tristezza la drammatica morte della sua famiglia, con la quale può finalmente fare i conti. 
+					A quanto pare è finalmente in grado di perdonare e si prende a cuore il bambino, il cui padre subirebbe la stessa sorte se il piccolo morisse, 
+					che sembra toccare in modo particolare Sid. Nel frattempo, il padre, mentre si dirige verso l'insediamento umano 
+					dietro il passo dell'iceberg, il padre è ancora alla ricerca della sua famiglia, ma sembra perdere la speranza.
+					Poco prima dell'imboscata prevista, dopo che Manni gli ha salvato la vita a rischio della propria a Vulcanismo, 
+					Diego confessa le sue intenzioni originarie di tradimento e si schiera con i suoi compagni. 
+					Con una manovra ingannevole, riescono ad attirare il branco in un'imboscata. Insieme riescono a respingere l'attacco delle altre tigri dai denti a sciabola. 
+					Sid riesce a salvare il bambino da Zeke, una delle tigri dai denti a sciabola. Soto vuole uccidere Manni, come aveva precedentemente pianificato con il branco, 
+					ma Diego lo ostacola e ne nasce una lotta, durante la quale Soto ha la meglio e scaraventa Diego contro una roccia. 
+					Poi rivolge la sua attenzione a Manny. Mentre Soto si prepara a sferrare un attacco mortale, Diego interviene e salva la vita a Manny, gravemente ferito. 
+					Nel tentativo di uccidere Diego e prendere il bambino, Soto viene scaraventato da Manni contro una roccia con dei ghiaccioli, facendoli cadere e accoltellando Soto. 
+					e accoltellano Soto a morte. Il resto del branco fugge. Diego spiega a Manni e Sid che nel branco le persone si proteggono l'un l'altra 
+					ed è per questo che ha salvato Manni. Poi muore apparentemente in presenza dei suoi amici e del bambino.
+					Alla fine, il bambino viene restituito al padre, che aveva già perso le speranze e cercato a lungo la sua famiglia, 
+					Manni e Sid si salutano e promettono di non dimenticare il bambino. Il padre regala a Manni una collana del bambino come ricordo. 
+					Si scopre che Diego è sopravvissuto e si è ripreso. Anche lui saluta il bambino e viene accolto con gioia dagli altri. 
+					I compagni Manni, Diego e Sid si dirigono insieme verso sud. 20.000 anni dopo, Scrat, intrappolato in un blocco di ghiaccio con la sua ghianda, si ritrova su una spiaggia. 
+					viene trascinato su una spiaggia. Prima che possa liberarsi completamente dal blocco di ghiaccio che si sta scongelando, la ghianda viene spazzata via. 
+					Scrat nota una noce di cocco e cerca di seppellirla, ma accidentalmente scatena un'eruzione vulcanica.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

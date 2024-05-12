@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Fu Panda</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #000000; 
+			background-color: #D1D1D1; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #000000; 
+            border-radius: 8px;
+            background-color: #D1D1D1; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Kung Fu Panda</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Characters</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character po">
+                    <img src="media\Po.png" alt="Lightning Po" class="character-image" width="10%" height="10%">
+                    <h2>Po</h2>
+                    <p>	Po, the lovable panda bear, dreams of becoming a kung fu warrior, although his chubby physique seems atypical at first. 
+						His enthusiasm, unwavering determination and the support of his friends lead to his transformation from a kitchen assistant to an inspirational dragon warrior, 
+						that he develops from a kitchen assistant into an inspiring dragon warrior. 
+						Po embodies the message of self-acceptance and true strength, while his humorous character captures the hearts of the audience.</p>
+                </div>
+
+                <div class="character shifu">
+                    <img src="media\Meister Shifu.webp" alt="Meister Shifu" class="character-image" width="8%" height="8%">
+                    <h2>Master Shifu</h2>
+                    <p>	Master Shifu is the experienced and wise teacher at the Jade Monastery who is responsible for training kung fu fighters. 
+						His initial scepticism towards Po turns into respect when he recognises his true potential. 
+						Shifu is not only an outstanding teacher, but also a profound character who struggles with the challenges of responsibility.</p>
+                </div>
+
+                <div class="character oogway">
+                    <img src="media\Oogway.png" alt="Oogway" class="character-image" width="10%" height="10%">
+                    <h2>Oogway</h2>
+                    <p>	Master Oogway is a wise and ancient turtle who serves as the founder of the Jade Monastery and as a spiritual guide. 
+						His profound wisdom and philosophical insights significantly influence the plot of the film. 
+						Oogway represents the harmony between body and mind and the search for inner peace and balance.</p>
+                </div>
+
+                <div class="character furios-five">
+                    <img src="media\Furios Five.png" alt="Furios Five" class="character-image" width="20%" height="20%">
+                    <h2>Furios Five</h2>
+                    <p>	The Furious Five are an impressive kung fu elite group, made up of Tigress, Monkey, Viper, Crane and Mantis, who protect the peaceful valley. 
+						Tigress, with her fearless determination, leads the group, while Monkey shines with playful lightness and acrobatic skills. 
+						Viper impresses with her smooth fighting technique, Crane with elegant aerial acrobatics and Mantis with lightning-fast movements.
+						This diverse troupe not only acts as defenders of the valley, but also as loyal support for Po, 
+						the lovable panda bear on his way to becoming a dragon warrior. The unique skills and personalities of each member 
+						create a balanced group dynamic that not only provides effective protection.</p>
+                </div>
+
+                <div class="character tai-lung">
+                    <img src="media\Tai Lung.webp" alt="Tai Lung" class="character-image" width="10%" height="10%">
+                    <h2>Tai Lung</h2>
+                    <p>	Tai Lung is an impressive snow leopard and former favourite student of Master Shifu. 
+						Despite his impressive kung fu skills, he is driven by the pursuit of power and recognition.
+						He breaks out of prison and takes on the Furious Five and Master Shifu.
+						His quest for recognition ends in a tragic confrontation with Po.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Plot</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+				<p>	Panda Po works in his father's noodle restaurant. He is soon to take over and prepare the famous secret noodle soup, 
+					whose last secret ingredient is only known to his father. At night, however, Po dreams of going on an adventure with the Furious Five (
+					Tigress, Crane, Monkey, Mantis and Viper), the students of the famous kung fu master Shifu, to fight against the evil of his world.
+					One day it is announced that old Oogway, the head of the Jade Palace and Shifu's teacher, will finally choose the legendary Dragon Warrior. 
+					According to tradition, only the Dragon Warrior will be able to stand against the terrible danger that threatens the region, 
+					when the evil kung fu warrior Tai Lung returns. Po, who actually only wants to watch the selection ceremony but is inadvertently locked out, 
+					gets caught in the middle of the action through his efforts to catch a glimpse of his idols and is chosen by the wise Oogway. 
+					Shifu reluctantly accepts him as his sixth pupil, but all attempts to teach him something (or get him to give up) fail; 
+					Only Po's tenacity and ability to suffer gradually command the respect of the tough fighters. Shifu's reluctance is mainly due to the fact 
+					that Tai Lung was his disciple and beloved foster son, who fell into evil in his quest for more power. 
+					This betrayal has shaken Shifu to the core and caused him to lose his inner peace, which is why he refuses to become too closely attached to a disciple again, 
+					to tie himself too closely to a disciple again - something Tigress also suffered from as a child. In a long night-time conversation, Oogway is able to convince Shifu, 
+					to take Po's training as a dragon warrior to heart; the old master then embarks on his last great journey. 
+					Shifu finally realises how he can train Po successfully: He observes the fat panda as he instinctively utilises his 
+					acrobatic skills to break open the cupboards in the pantry in search of food. With the help of treats as a prize 
+					Pos's talent can be awakened. The two begin training, and Po quickly becomes a talented kung fu fighter.
+					After breaking out of the Chorh Gom prison, which was built especially for him, Tai Lung sets off on his own, 
+					to seek revenge and claim the title of respected dragon warrior. The Furious Five throw themselves at him, but are ignominiously defeated. 
+					In order to stand up to Tai Lung, Po is given the sacred Dragon Scroll, which only the Dragon Warrior is allowed to read and which is said to contain the deepest secret of Kung Fu. 
+					Strangely, however, the only content of the scroll is a blank, golden mirror surface.
+					Desperate that even the great secret of the dragon scroll has let them down, Shifu orders the evacuation of the village; 
+					He alone will face Tai Lung, his greatest mistake. Po joins his father, who reveals the secret ingredient of his secret noodle soup 
+					of his secret noodle soup: "Nothing" - because for something to be special, you just have to believe that it is special. 
+					With these words, Po understands the wisdom behind the dragon scroll. He rushes to Shifu's aid at the last moment, when he is already weakened from his fight with Tai Lung. 
+					With his new-found confidence, using his powerful physique and finally applying the mysterious Wuxi Finger Grip 
+					he succeeds in destroying Tai Lung. The villagers are able to return to their village, the Furious Five recognise Po as one of their own, 
+					and Shifu finally regains his inner peace after years.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

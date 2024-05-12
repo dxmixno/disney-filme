@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Fu Panda</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #000000; 
+			background-color: #D1D1D1; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #000000; 
+            border-radius: 8px;
+            background-color: #D1D1D1; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Indietro</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Kung Fu Panda</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Personaggi</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character po">
+                    <img src="media\Po.png" alt="Lightning Po" class="character-image" width="10%" height="10%">
+                    <h2>Po</h2>
+                    <p>	Po, l'adorabile panda, sogna di diventare un guerriero di kung fu, anche se all'inizio il suo fisico paffuto sembra atipico. 
+						Il suo entusiasmo, la sua incrollabile determinazione e il sostegno dei suoi amici lo portano a trasformarsi da aiuto cuoco in un ispiratore guerriero dragone, 
+						che da sguattero si trasforma in un guerriero dragone di grande ispirazione. 
+						Po incarna il messaggio dell'accettazione di sé e della vera forza, mentre il suo carattere umoristico cattura il cuore del pubblico.</p>
+                </div>
+
+                <div class="character shifu">
+                    <img src="media\Meister Shifu.webp" alt="Meister Shifu" class="character-image" width="8%" height="8%">
+                    <h2>Maestro Shifu</h2>
+                    <p>	Il Maestro Shifu è l'esperto e saggio insegnante del Monastero di Giada, responsabile dell'addestramento dei combattenti di kung fu. 
+						Il suo iniziale scetticismo nei confronti di Po si trasforma in rispetto quando riconosce il suo vero potenziale. 
+						Shifu non è solo un insegnante eccezionale, ma anche un personaggio profondo che lotta contro le sfide della responsabilità.</p>
+                </div>
+
+                <div class="character oogway">
+                    <img src="media\Oogway.png" alt="Oogway" class="character-image" width="10%" height="10%">
+                    <h2>Oogway</h2>
+                    <p>	Il Maestro Oogway è una tartaruga saggia e antica che funge da fondatore del Monastero di Giada e da guida spirituale. 
+						La sua profonda saggezza e le sue intuizioni filosofiche influenzano in modo significativo la trama del film. 
+						Oogway rappresenta l'armonia tra corpo e mente e la ricerca della pace interiore e dell'equilibrio.</p>
+                </div>
+
+                <div class="character furios-five">
+                    <img src="media\Furios Five.png" alt="Furios Five" class="character-image" width="20%" height="20%">
+                    <h2>Furios Five</h2>
+                    <p>	I Cinque Furiosi sono un'impressionante élite di kung fu, composta da Tigre, Scimmia, Vipera, Gru e Mantide, che protegge la pacifica valle. 
+						Tigre, con la sua impavida determinazione, guida il gruppo, mentre Scimmia brilla per la sua giocosa leggerezza e le sue abilità acrobatiche. 
+						Vipera impressiona con la sua tecnica di combattimento, Gru con eleganti acrobazie aeree e Mantide con movimenti fulminei.
+						Questa variegata troupe non solo funge da difensore della valle, ma anche da fedele supporto per Po, 
+						l'adorabile panda che sta per diventare un guerriero dragone. Le abilità e le personalità uniche di ogni membro 
+						creano una dinamica di gruppo equilibrata che non solo fornisce una protezione efficace.</p>
+                </div>
+
+                <div class="character tai-lung">
+                    <img src="media\Tai Lung.webp" alt="Tai Lung" class="character-image" width="10%" height="10%">
+                    <h2>Tai Lung</h2>
+                    <p>	Tai Lung è un imponente leopardo delle nevi ed ex allievo preferito del Maestro Shifu. 
+						Nonostante le sue impressionanti abilità nel kung fu, è spinto dalla ricerca di potere e riconoscimento.
+						Evade dalla prigione e affronta i Cinque Furiosi e il Maestro Shifu.
+						La sua ricerca di riconoscimento termina in un tragico confronto con Po.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Trama</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+				<p>	Panda Po lavora nel ristorante di noodle del padre. Presto prenderà il comando e preparerà la famosa zuppa di noodle segreta, 
+					il cui ultimo ingrediente segreto è noto solo al padre. Di notte, però, Po sogna di vivere un'avventura con i Cinque Furiosi (
+					Tigre, Gru, Scimmia, Mantide e Vipera), gli allievi del famoso maestro di kung fu Shifu, per combattere il male del suo mondo.
+					Un giorno viene annunciato che il vecchio Oogway, capo del Palazzo di Giada e maestro di Shifu, sceglierà finalmente il leggendario Guerriero Dragone. 
+					Secondo la tradizione, solo il Guerriero Dragone sarà in grado di contrastare il terribile pericolo che minaccia la regione, 
+					con il ritorno del malvagio guerriero di kung fu Tai Lung. Po, che in realtà vuole solo assistere alla cerimonia di selezione ma viene inavvertitamente chiuso fuori, 
+					si trova nel mezzo dell'azione grazie ai suoi sforzi di intravedere i suoi idoli e viene scelto dal saggio Oogway. 
+					Shifu lo accetta a malincuore come sesto allievo, ma tutti i tentativi di insegnargli qualcosa (o di farlo desistere) falliscono; 
+					Solo la tenacia di Po e la sua capacità di soffrire conquistano gradualmente il rispetto dei duri combattenti. La riluttanza di Shifu è dovuta principalmente al fatto che 
+					che Tai Lung era il suo discepolo e amato figlio adottivo, caduto nel male nella sua ricerca di maggior potere. 
+					Questo tradimento ha scosso Shifu nel profondo e gli ha fatto perdere la pace interiore, motivo per cui si rifiuta di legarsi ancora troppo a un discepolo, 
+					di legarsi di nuovo troppo strettamente a un discepolo, cosa di cui soffriva anche Tigre da bambina. In una lunga conversazione notturna, Oogway riesce a convincere Shifu, 
+					a prendere a cuore l'addestramento di Po come guerriero dragone; il vecchio maestro intraprende quindi il suo ultimo grande viaggio. 
+					Shifu capisce finalmente come addestrare Po con successo: Osserva il panda grasso mentre utilizza istintivamente le sue 
+					acrobatico per aprire gli armadietti della dispensa in cerca di cibo. Con l'aiuto di leccornie come premio 
+					il talento di Pos può essere risvegliato. I due iniziano ad allenarsi e Po diventa rapidamente un combattente di kung fu di talento.
+					Dopo essere evaso dalla prigione di Chorh Gom, costruita appositamente per lui, Tai Lung parte da solo, 
+					per cercare vendetta e rivendicare il titolo di rispettato guerriero dragone. I Cinque Furiosi gli si scagliano contro, ma vengono sconfitti ignominiosamente. 
+					Per poter affrontare Tai Lung, Po riceve la sacra Pergamena del Drago, che solo il Guerriero Dragone può leggere e che si dice contenga il segreto più profondo del Kung Fu. 
+					Stranamente, però, l'unico contenuto della pergamena è una superficie vuota di specchio dorato.
+					Disperato perché anche il grande segreto della pergamena del drago li ha delusi, Shifu ordina l'evacuazione del villaggio; 
+					Solo lui affronterà Tai Lung, il suo più grande errore. Po raggiunge il padre, che gli rivela l'ingrediente segreto della sua zuppa segreta di noodle 
+					della sua zuppa di noodle segreta: "Niente", perché perché qualcosa sia speciale, basta credere che lo sia. 
+					Con queste parole, Po comprende la saggezza che si cela dietro la pergamena del drago. Si precipita in aiuto di Shifu all'ultimo momento, quando è già indebolito dalla lotta con Tai Lung. 
+					Con la sua ritrovata fiducia, usando il suo fisico potente e applicando finalmente la misteriosa Presa delle dita di Wuxi 
+					riesce a distruggere Tai Lung. Gli abitanti del villaggio possono tornare al loro villaggio, i Cinque Furiosi riconoscono Po come uno di loro, 
+					e Shifu ritrova finalmente la sua pace interiore dopo anni.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Age</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #33B5FF;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #0066cc; 
+			background-color: #d9f3ff; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #0066cc; 
+            border-radius: 8px;
+            background-color: #d9f3ff; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Zurück</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Ice Age</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Charaktere</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character manny">
+                    <img src="media\Manny.webp" alt="Manny" class="character-image" height="15%" width="15%">
+                    <h2>Manny</h2>
+                    <p>	Manny, das gutmütige Mammut, ist der weise Anführer der Gruppe, der seine riesige Statur mit einer schützenden Natur verbindet. 
+						Durch die Herausforderungen der Eiszeit wird Manny nicht nur physisch, sondern auch emotional herausgefordert. 
+						Seine Reise führt nicht nur zu einem Verständnis von Gemeinschaft, sondern auch dazu, dass er seine tiefsten Ängste und Traumata überwindet. 
+						Mit einem riesigen Herzen und einer beeindruckenden Stärke zeigt Manny, dass wahre Führungskraft in Mitgefühl und Fürsorglichkeit liegt.</p>
+                </div>
+
+                <div class="character sid">
+                    <img src="media\Sid.webp" alt="Sid" class="character-image" height="8%" width="8%">
+                    <h2>Sid</h2>
+                    <p>	Sid, das tollpatschige Faultier, bringt mit seiner naiven Art und liebenswerten Tollpatschigkeit eine einzigartige Dynamik in die Gruppe. 
+						Sein anfänglicher Mangel an Selbstbewusstsein wird durch seine Abenteuer und Freundschaften überwunden, 
+						und er erweist sich als ein wesentlicher Baustein der Gruppenharmonie. 
+						Sid lehrt uns, dass manchmal diejenigen, die anders sind, eine erfrischende Perspektive und Lebensfreude mit sich bringen.</p>
+                </div>
+
+                <div class="character diego">
+                    <img src="media\Diego.webp" alt="Diego" class="character-image" height="12%" width="12%">
+                    <h2>Diego</h2>
+                    <p>	Diego, der anfangs misstrauische Säbelzahntiger, entwickelt sich zu einem komplexen Charakter, 
+						der zwischen seinen jagdlichen Instinkten und seiner Loyalität zu Freunden steht. 
+						Sein Wandel spiegelt wider, dass selbst scheinbar unüberwindliche Unterschiede durch gemeinsame Ziele und echte Verbindungen überbrückt werden können. 
+						Die Kombination aus scharfen Sinnen und einem warmen Herzen macht Diego zu einem faszinierenden Mitglied der Gruppe.</p>
+                </div>
+
+                <div class="character scrat">
+                    <img src="media\Scrat.png" alt="Scrat" class="character-image" height="10%" width="10%">
+                    <h2>Scrat</h2>
+                    <p>	Scrat, das unglückliche Eichhörnchen, ist ein ikonisches Element der Filme. 
+						In seinem unermüdlichen Streben nach seiner Eichel werden slapstickartige Komödien und Chaos geschaffen. 
+						Scrat ist nicht nur eine komische Figur, sondern symbolisiert auch den ständigen Drang nach etwas Unerreichbarem, 
+						womit sich viele Zuschauer identifizieren können.</p>
+                </div>
+
+				<div class="character crash-eddie">
+                    <img src="media\Crash and Eddie.webp" alt="Crash und Eddie" class="character-image" height="10%" width="10%">
+                    <h2>Crash und Eddie</h2>
+                    <p>	Crash und Eddie, die verspielten Opossum-Brüder, tragen mit ihrer kindlichen Unbekümmertheit und abenteuerlustigen Energie zum Humor der Filme bei. 
+						Ihre chaotischen Eskapaden und ihre kindlichen Streiche bringen nicht nur Spaß, sondern erinnern daran, 
+						dass selbst in gefährlichen Zeiten die Freude an der Unbeschwertheit nicht verloren gehen sollte. 
+						Ihre lebendige Art ergänzt das Ensemble der Charaktere perfekt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Handlung</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+                <p>	Der Film spielt vor etwa 20.000 Jahren in der letzten Eiszeit, und der Winter steht vor der Tür. 
+					Während das „Säbelzahneichhörnchen“ Scrat fieberhaft versucht, seine geliebte Eichel zu vergraben und dabei während des Films in einen Schlamassel 
+					nach dem anderen gerät, ereignet sich die eigentliche Filmhandlung. Wegen des hereinbrechenden eiszeitlichen Winters 
+					macht sich die ganze eiszeitliche Tierwelt auf den Weg in den Süden. Nur das einzelgängerische Mammut Manfred (Manni) 
+					widersetzt sich dem Gruppendruck und wandert nach Norden. Seit seine Familie vor Jahren von Menschen erlegt wurde und er es nicht geschafft hat, 
+					sie erfolgreich zu verteidigen, meidet er Gesellschaft und ist ein miesepetriger Einzelgänger.
+					Riesenfaultier und Nervensäge Sid wird wie jedes Jahr von seiner Familie allein zurückgelassen. Als er von zwei Brontotherien gejagt wird, 
+					denen er eine der letzten Löwenzahnblumen vor dem Winter weggefressen hat, wird er von Manfred gerettet. Fortan schließt er sich dem Mammut an, 
+					sehr zu dessen Leidwesen. Unterdessen überfällt ein Rudel Säbelzahntiger unter ihrem Anführer Soto eine Horde Steinzeitmenschen, 
+					um aus Rache für erlegte Rudelmitglieder das Baby des Häuptlings zu entführen und zu töten. Doch dessen Mutter kann ihr Kind 
+					gerade noch rechtzeitig vor Säbelzahntiger Diego in Sicherheit bringen und mit dem Säugling fliehen. Diego setzt nach. 
+					Die Säbelzahntiger müssen schließlich fliehen, doch Soto erteilt Diego den Befehl, das Baby zu finden und ihm zu bringen. Der Vater, 
+					dessen Sippe sich auf dem Weg zum Eisbergpass, auf dessen anderer Seite sie eine Siedlung haben, befindet, 
+					bemerkt das Verschwinden und macht sich mit seinen Leuten auf die Suche nach seiner Familie. Zufällig entdecken Manni und Sid die Fraum, 
+					die, von Diego in die Enge getrieben, einen Wasserfall hinunter gesprungen war und nun dem Tode nahe ist. 
+					Sie reicht den zwei verdutzten Tieren ihren kleinen Sohn an Land, bevor sie vom Wasserstrom wieder fortgerissen wird.
+					Diego versucht, wie von Soto befohlen, das Menschenkind zum Fressen zurückzuholen. Unter dem Vorwand, Manni und Sid helfen zu wollen, 
+					das Kind den Artgenossen wiederzugeben, versucht Diego, sich ihnen anzuschließen. Tatsächlich will er sie einem Hinterhalt zuführen, 
+					wo seine Kameraden das Kind in Empfang nehmen und zudem Manni, nachdem sie durch Diego von ihm und Sid erfahren haben, erlegen wollen. 
+					Schließlich wird er trotz Mannis Zweifel als Fährtensucher von den sich uneinigen Manni und Sid aufgenommen.
+					Auf dem Weg zurück zu den Menschen müssen die drei ungleichen Tiere verschiedene Abenteuer überstehen – sich so beispielsweise gegen die Brontotherien 
+					oder Dodos wehren (diese rotten sich durch ungeschicktes und selbstüberschätzendes Verhalten sowie Futterneid selbst aus) 
+					und den Tücken von Kälte und Eis, Lava und Feuer trotzen. Dabei müssen Manni, Sid und Diego Vertrauen zueinander aufbauen, 
+					was sich in einer Welt voller Jäger und Gejagter als nicht so einfach herausstellt. Unter anderem müssen sie vor herabbrechendem Eis 
+					in eine Höhle fliehen und erleben dort eine abenteuerliche Rutschpartie. Auch die Aussicht auf das Zusammentreffen mit den Menschen, 
+					welche offenbar – wie sie es bei Höhlenzeichnungen gesehen haben – extra Waffen zum Töten der Tiere erfunden haben, 
+					vereinfacht ihre Situation nicht. Als Manni bei den Höhlenmalereien eine Mammutfamilie entdeckt, 
+					erinnert er sich traurig an den dramatischen Tod seiner Familie, den er aber nun endlich verarbeiten kann. 
+					Er kann nun offenbar endlich vergeben und schließt den Kleinen, dessen Vater im Falle des Todes des Babys dasselbe Schicksal blühen würde, 
+					endlich ins Herz, was besonders Sid sehr zu berühren scheint. Währenddessen sucht der Vater auf dem Weg zur Menschensiedlung 
+					hinter dem Eisbergpass noch immer nach seiner Familie, verliert aber scheinbar zunehmend die Hoffnung.
+					Kurz vor dem geplanten Hinterhalt, nachdem Manni ihm bei Vulkanismus zuvor unter Einsatz des eigenen Lebens das Leben gerettet hatte, 
+					gesteht Diego seine ursprünglichen verräterischen Absichten und schlägt sich auf die Seite seiner Gefährten. 
+					Durch ein Täuschungsmanöver können sie das Rudel in einen Hinterhalt locken. Gemeinsam trotzen sie erfolgreich dem Angriff der anderen Säbelzahntiger. 
+					Sid schafft es, das Baby vor Zeke, einem der Säbelzahntiger, zu retten. Soto will Manni töten, wie er es zuvor schon mit dem Rudel geplant hat, 
+					doch Diego stellt sich ihm in den Weg und es kommt zum Kampf, in dessen Verlauf Soto die Oberhand gewinnt und Diego gegen einen Felsen schleudert. 
+					Dann wendet er sich Manny zu. Als Soto zur tödlichen Attacke ansetzt, springt Diego dazwischen und rettet so, schwer verletzt, Mannis Leben. 
+					Soto wird beim Versuch, Diego zu töten und sich das Kind zu greifen, von Manni gegen einen Felsen mit Eiszapfen geworfen, woraufhin diese abstürzen 
+					und Soto erstechen. Der Rest des Rudels flüchtet. Diego erklärt Manni und Sid, dass man sich in einer Herde gegenseitig beschützt 
+					und er deshalb Manni gerettet hat. Dann stirbt er scheinbar in Gegenwart seiner Freunde und des Babys.
+					Am Ende wird das Kind dem ausgiebig nach seiner Familie suchenden Vater, der die Hoffnung schon aufgegeben hatte, zurückgegeben, 
+					worauf Manni und Sid Abschied nehmen und dem Baby versprechen, es nicht zu vergessen. Der Vater übergibt Manni eine Halskette des Babys als Andenken. 
+					Es stellt sich heraus, dass Diego überlebt und sich erholt hat. Auch er nimmt Abschied vom Baby und wird von den anderen freudig begrüßt. 
+					Die Gefährten Manni, Diego und Sid ziehen gemeinsam nach Süden. 20.000 Jahre später wird der mit seiner Eichel in einen Eisblock eingeschlossene Scrat 
+					an einen Strand gespült. Bevor er sich ganz aus dem tauenden Eisblock befreien kann, wird die Eichel weggeschwemmt wird. 
+					Scrat wird auf eine Kokosnuss aufmerksam und will diese nun vergraben, löst dabei aber versehentlich einen Vulkanausbruch aus.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

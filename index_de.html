@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney und Pixar Filme</title>
+	<style>
+        .button-container {
+			position: fixed;
+            top: 25px; 
+            right: 25px; 
+        }
+		
+        .button {
+            margin-left: 10px; /* Abstand zwischen den Buttons */
+			padding: 7px 14px;
+			font-size: 15px;
+			background-color: #FFFFFF;
+			color: #000000
+			border radius: 10px;
+			cursor: pointer;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+        }
+        header {
+            text-align: center;
+            padding: 15px;
+            background-color: #00205b;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .film {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        .cars {
+            background-color: #ffd9d9;
+            border: 2px solid #cc0000;
+            color: #cc0000;
+        }
+        .shrek {
+            background-color: #d9ffd9;
+            border: 2px solid #00cc00;
+            color: #00cc00;
+        }
+        .ice-age {
+            background-color: #d9f3ff;
+            border: 2px solid #0066cc;
+            color: #0066cc;
+        }
+		.kung-fu-panda {
+			background-color: #D1D1D1;
+			border: 2px solid #000000;
+			color: #000000;
+		}
+        .review {
+            margin-top: 10px;
+        }
+        .wiki-link {
+            color: #3366cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .film-cover {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; /* Bild zur rechten Seite verschieben */
+            margin-left: 10px; /* Abstand zwischen Text und Bild */
+        }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .language-flag {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+	<div class="button-container">
+        <button class="button" onclick="window.location.href = 'file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/index_it.html';"> IT </button>
+        <button class="button" onclick="window.location.href = 'file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/index_en.html';"> EN </button>
+    </div>
+
+	<header>
+		<h1>Disney und Pixar Filme</h1>
+	</header>
+
+	<main>
+		<div class="film cars">
+			<h2>Cars</h2>
+				<img src="media\cars.jpg" alt="Cars Cover" class="film-cover" height="210px" width="140px">
+			<p>Bewertung: 5/5</p>
+			<div class="review">
+				<h3>Rezensionen:</h3>
+				<p>Ein unterhaltsamer Film mit tollen Charakteren und beeindruckender Animation.</p>
+				<p>Die Rennszenen sind aufregend und die Botschaft über Freundschaft ist herzerwärmend.</p>
+				<p>Ein Film, der sowohl für Kinder als auch für Erwachsene geeignet ist.</p>
+			</div>
+			<a href="file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/pag1/pag1_de.html">Mehr über Cars</a>
+		</div>
+
+		<div class="film shrek">
+			<h2>Shrek</h2>
+				<img src="media\shrek.jpg" alt="Shrek Cover" class="film-cover" height="210px" width="140px">
+			<p>Bewertung: 4.8/5</p>
+			<div class="review">
+				<h3>Rezensionen:</h3>
+				<p>Ein modernes Märchen mit einer Prise Humor und Herz. Ein Klassiker!</p>
+				<p>Shrek bringt eine einzigartige Perspektive in die Welt der animierten Filme.</p>
+				<p>Die Charakterentwicklung ist brillant, und die Dialoge sind clever geschrieben.</p>
+			</div>
+			<a href="file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/pag2/pag2_de.html">Mehr über Shrek</a>
+		</div>
+
+		<div class="film ice-age">
+			<h2>Ice Age</h2>
+				<img src="media\Ice Age.jpg" alt="Ice Age Cover" class="film-cover" height="210px" width="140px">
+			<p>Bewertung: 4.5/5</p>
+			<div class="review">
+				<h3>Rezensionen:</h3>
+				<p>Ein lustiger Animationsfilm, der Jung und Alt gleichermaßen begeistert.</p>
+				<p>Die Charaktere sind liebenswert, und die Geschichte ist spannend.</p>
+				<p>Ice Age hat eine perfekte Mischung aus Humor und Herz.</p>
+			</div>
+			<a href="file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/pag3/pag3_de.html">Mehr über Ice Age</a>
+		</div>
+
+		<div class="film kung-fu-panda">
+			<h2>Kung Fu Panda</h2>
+				<img src="media\kung fu panda.jpg" alt="Kung Fu Panda Cover" class="film-cover" height="210px" width="140px">
+			<p>Bewertung: 4.7/5</p>
+			<div class="review">
+				<h3>Rezensionen:</h3>
+				<p>Perfekte Kombination zwischen Action und berührenden Szenen.</p>
+				<p>Ein Kinderfilm wo aber auch viele Eltern etwas lernen dürfen.</p>
+				<p>Einzigartige und perfekt gschriebene Charaktere.</p>
+			</div>
+			<a href="file:///C:/Users/damia/OneDrive/Desktop/html/disney_campisi/pag4/pag4_de.html">Mehr über Kung Fu Panda</a>
+		</div>
+	</main>
+
+</body>
+</html>

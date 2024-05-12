@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #0BB200;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #00cc00; 
+			background-color: #d9ffd9; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #00cc00; 
+            border-radius: 8px;
+            background-color: #d9ffd9; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Shrek</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Characters</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character shrek">
+                    <img src="media\Shrek.png" alt="Shrek" class="character-image" width="9%" height="9%">
+                    <h2>Shrek</h2>
+                    <p>	Shrek, the green ogre, lives a secluded life in the swamp and enjoys his solitude. 
+						But behind his rough-and-tumble façade lies a heart of gold. 
+						When he involuntarily becomes embroiled in an adventure, he discovers not only the importance of friendship, but also 
+						that love can appear in the most unusual forms. Shrek undergoes a remarkable development, 
+						from a reclusive loner to a hero who finds his true values.</p>
+                </div>
+
+                <div class="character fiona">
+                    <img src="media\Fiona.png" alt="Fiona" class="character-image" width="8%" height="8%">
+                    <h2>Fiona</h2>
+                    <p>	Princess Fiona is a unique character in the fairytale universe. 
+						During the day she appears as a classic beauty, but at night she transforms into an ogre. 
+						Despite her royal duties, Fiona is an independent and determined woman. 
+						Her journey with Shrek leads not only to an unconventional love story, but also to a liberation from societal expectations. 
+						Fiona represents the message that true love is based on authenticity and self-acceptance.</p>
+                </div>
+
+                <div class="character donkey">
+                    <img src="media\Donkey.png" alt="Donkey" class="character-image" width="7%" height="7%">
+                    <h2>Donkey</h2>
+                    <p>	Donkey, with his lively personality and quick speech, becomes Shrek's unexpected and loyal companion. 
+						His humorous nature not only brings lightness to the story, but also emphasises the importance of diversity and acceptance. 
+						Donkey teaches us that friendship knows no boundaries and that even unusual alliances can lead to the strongest bonds. 
+						His character is a living example of joie de vivre and positivity.</p>
+                </div>
+
+                <div class="character lord farquaad">
+                    <img src="media\Lord Farquaad.png" alt="Lord Farquaad" class="character-image" width="10%" height="10%">
+                    <h2>Lord Farquaad</h2>
+                    <p>	Lord Farquaad, the power-hungry ruler with short stature, aspires to become king by marrying Princess Fiona. 
+						His character adds a dash of absurdity to the film as his self-centred nature and absurd decisions lead to comical situations. 
+						Farquaad's short-sighted ambitions are humorously criticised and he serves as a classic fairytale antagonist with a modern twist.</p>
+                </div>
+
+                <div class="character chick-hicks">
+                    <img src="media\Dragon.png" alt="Drache" class="character-image" width="15%" height="15%">
+                    <h2>Dragon</h2>
+                    <p>	The dragoness, initially introduced as a threat, develops into an unexpected ally of Shrek and Donkey as the story progresses. 
+						Her transformation from a terrifying monster to a symbol of love underlines the film's central message, 
+						that prejudice is often deceptive and true beauty lies within. 
+						The dragoness represents the idea that everyone, regardless of outward appearances, has the capacity for love and compassion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Plot</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+                <p>	The film begins with the camera plunging into a fairy tale book that tells the story of a princess who has a terrible, 
+					curse that is not specified. She is trapped in a tower and guarded by a fire-breathing dragon, 
+					until a brave knight frees her and releases her from the curse with the kiss of true love.
+					The hero of the story, Shrek, is an ogre. He is therefore perceived by his contemporaries as big, stupid, ugly and above all dangerous. 
+					He lives in a swamp and loves to be alone. When Lord Farquaad, the ruler of the land of "DuLoc", banishes all mythical creatures 
+					and relocates them to Shrek's swamp, he makes a deal with the lord: he can have his swamp all to himself again, 
+					if he succeeds in freeing the beautiful Princess Fiona from her tower, which is guarded by a dragon. Farquaad secretly promises himself 
+					marriage to the princess, which would make him king. Shrek is accompanied on this mission by a talking donkey. 
+					Together, the two very different creatures experience various adventures. They manage to free Fiona from the tower 
+					and save her from the dragon. Fiona herself is outraged that Lord Farquaad has sent Shrek as a henchman instead of heroically rescuing her himself. 
+					On the way back to DuLoc, Shrek has to carry her at first because she refuses to come along. On the way, Shrek and Fiona as well as Donkey 
+					and the dragoness fall in love with each other along the way doesn't make the journey any easier. Shrek doesn't realise at this point that Fiona is under a curse, 
+					that will turn her into an ogre herself after nightfall. The night before Fiona is to meet Lord Farquaad, Donkey discovers 
+					that Fiona turns into an ogre after sunset. Donkey tries to persuade Fiona to stay with Shrek. Shrek hears through the door 
+					from the conversation only that Fiona says nobody could love a monster. Shrek thinks that Fiona is talking about him, as he has no way of knowing 
+					that Fiona calls herself a monster. Furious, he takes Farquaad to Fiona shortly after sunrise, who has returned to human form. 
+					Shrek says goodbye to Fiona, telling her that she is right and that nobody could fall in love with a monster. Fiona, on the other hand, thinks 
+					he is talking about her, although he is talking about himself. Unhappy, Fiona decides to marry Farquaad. After donkey Shrek explains the misunderstanding, 
+					the two prevent the wedding with the help of the dragon. Farquaad, who wants to execute Shrek and lock Fiona back in the tower, 
+					is devoured by the dragon. The subsequent kiss of true love between Fiona and Shrek lifts the curse on Fiona. 
+					She finally takes on the form of an ogre woman and marries Shrek. </p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>

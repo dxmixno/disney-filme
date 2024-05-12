@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Fu Panda</title>
+	<style>	
+    button {
+		padding: 7px 14px;
+		font-size: 15px;
+		background-color: #FFFFFF;
+		color: #000000
+		border radius: 10px;
+		cursor: pointer;
+    }
+	</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black; 
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+			border-radius: 8px;
+        }
+        main {
+            margin-top: 20px;
+        }
+        .block {
+            margin-bottom: 30px;
+        }
+        .block-header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FFFFFF; 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block-yeah {
+            display: none;
+            border: 2px solid #FFFFFF; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+		.block-content {
+            display: none;
+            border: 2px solid #000000; 
+            padding: 10px;
+            border-radius: 5px;
+			border: 2px solid #000000; 
+			background-color: #D1D1D1; 
+        }
+        .characters-container, .plot-container {
+            text-align: left; 
+        }
+        .character, .plot {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #000000; 
+            border-radius: 8px;
+            background-color: #D1D1D1; 
+            overflow: hidden; 
+        }
+        .character-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            float: right; 
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="goBack()">Zurück</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+<header>
+    <h1>Kung Fu Panda</h1>
+</header>
+
+<main>
+    <div class="block" id="characters-block">
+        <div class="block-header" onclick="toggleBlock('characters-content')">
+            <h2>Charaktere</h2>
+            <span id="characters-arrow">&#9660;</span>
+        </div>
+        <div class="block-yeah" id="characters-content">
+            <div class="characters-container">
+                <div class="character po">
+                    <img src="media\Po.png" alt="Lightning Po" class="character-image" width="10%" height="10%">
+                    <h2>Po</h2>
+                    <p>	Po, der liebenswerte Pandabär, träumt davon, ein Kung-Fu-Krieger zu werden, obwohl sein rundlicher Körperbau zunächst untypisch erscheint. 
+						Seine Begeisterung, unerschütterliche Entschlossenheit und die Unterstützung seiner Freunde führen dazu, 
+						dass er sich vom Küchenhilfen zum inspirierenden Drachenkrieger entwickelt. 
+						Po verkörpert die Botschaft von Selbstakzeptanz und wahrer Stärke, während sein humorvoller Charakter die Herzen der Zuschauer erobert.</p>
+                </div>
+
+                <div class="character shifu">
+                    <img src="media\Meister Shifu.webp" alt="Meister Shifu" class="character-image" width="8%" height="8%">
+                    <h2>Meister Shifu</h2>
+                    <p>	Meister Shifu ist der erfahrene und weise Lehrer im Jadekloster, der für die Ausbildung von Kung-Fu-Kämpfern verantwortlich ist. 
+						Seine anfängliche Skepsis gegenüber Po wandelt sich in Respekt, als er dessen wahres Potenzial erkennt. 
+						Shifu ist nicht nur ein herausragender Lehrer, sondern auch ein tiefsinniger Charakter, der mit den Herausforderungen der Verantwortung ringt.</p>
+                </div>
+
+                <div class="character oogway">
+                    <img src="media\Oogway.png" alt="Oogway" class="character-image" width="10%" height="10%">
+                    <h2>Oogway</h2>
+                    <p>	Meister Oogway ist eine weise und alte Schildkröte, die als Gründer des Jadeklosters und als spiritueller Führer dient. 
+						Seine tiefgehenden Weisheiten und philosophischen Einsichten beeinflussen die Handlung des Films maßgeblich. 
+						Oogway repräsentiert die Harmonie zwischen Körper und Geist sowie die Suche nach innerem Frieden und Gleichgewicht.</p>
+                </div>
+
+                <div class="character furios-five">
+                    <img src="media\Furios Five.png" alt="Furios Five" class="character-image" width="20%" height="20%">
+                    <h2>Furios Five</h2>
+                    <p>	Die Furiosen Fünf sind eine beeindruckende Kung-Fu-Elitegruppe, zusammengesetzt aus Tigress, Monkey, Viper, Crane und Mantis, die das friedliche Tal beschützen. 
+						Tigress, mit ihrer furchtlosen Entschlossenheit, führt die Gruppe an, während Monkey mit verspielter Leichtigkeit und akrobatischen Fähigkeiten glänzt. 
+						Viper beeindruckt mit ihrer geschmeidigen Kampftechnik, Crane mit eleganter Luftakrobatik und Mantis mit blitzschnellen Bewegungen.
+						Diese diverse Truppe agiert nicht nur als Verteidiger des Tals, sondern auch als treue Unterstützung für Po, 
+						den liebenswerten Pandabären auf seinem Weg zum Drachenkrieger. Die einzigartigen Fähigkeiten und Persönlichkeiten jedes Mitglieds 
+						schaffen eine ausgewogene Gruppendynamik, die nicht nur für effektiven Schutz sorgt.</p>
+                </div>
+
+                <div class="character tai-lung">
+                    <img src="media\Tai Lung.webp" alt="Tai Lung" class="character-image" width="10%" height="10%">
+                    <h2>Tai Lung</h2>
+                    <p>	Tai Lung ist ein beeindruckender Schneeleopard und ehemaliger Lieblingsschüler von Meister Shifu. 
+						Trotz seiner beeindruckenden Kung-Fu-Fähigkeiten wird er vom Streben nach Macht und Anerkennung getrieben.
+						Er bricht aus dem Gefängnis aus und nimmt es mit den Furiosen Fünf sowie Meister Shifu auf.
+						Seine Suche nach Anerkennung endet in einer tragischen Konfrontation mit Po.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="plot-block">
+        <div class="block-header" onclick="toggleBlock('plot-content')">
+            <h2>Handlung</h2>
+            <span id="plot-arrow">&#9660;</span>
+        </div>
+        <div class="block-content" id="plot-content">
+            <div class="plot-container">
+				<p>	Der Pandabär Po arbeitet im Nudelrestaurant seines Vaters. Bald soll er es übernehmen und die berühmte Geheim-Nudelsuppe, 
+					deren letzte geheime Zutat bislang nur der Vater kennt, zubereiten. Nachts aber träumt Po davon, zusammen mit den Furiosen Fünf (
+					Tigress, Crane, Monkey, Mantis und Viper), den Schülern des berühmten Kung-Fu-Meisters Shifu, gegen das Böse seiner Welt zu kämpfen.
+					Eines Tages wird verkündet, dass der alte Oogway, der Vorsteher des Jadepalastes und Shifus Lehrer, endlich den legendären Drachenkrieger auswählen wird. 
+					Der Überlieferung zufolge wird nur der Drachenkrieger gegen die furchtbare Gefahr bestehen können, die dem Landstrich droht, 
+					wenn der böse Kung-Fu-Krieger Tai Lung zurückkehrt. Po, der eigentlich nur der Auswahlzeremonie zusehen will, versehentlich aber ausgesperrt wird, 
+					gerät durch seine Bemühungen, doch noch einen Blick auf seine Idole erhaschen zu können, mitten ins Geschehen und wird vom weisen Oogway ausgewählt. 
+					Widerwillig nimmt Shifu ihn als sechsten Schüler auf, doch alle Versuche, ihm etwas beizubringen (oder ihn zum Aufgeben zu bewegen), scheitern; 
+					nur Pos Hartnäckigkeit und Leidensfähigkeit nötigen den harten Kämpfern nach und nach Respekt ab. Shifus Widerwille hängt vor allem damit zusammen, 
+					dass Tai Lung sein Schüler und geliebter Pflegesohn war, der auf der Suche nach mehr Macht jedoch dem Bösen verfiel. 
+					Dieser Verrat hat Shifu innerlich erschüttert und seinen inneren Frieden verlieren lassen; daher weigert er sich, 
+					sich wieder zu eng an einen Schüler zu binden – worunter auch Tigress als Kind schwer litt. In einem langen nächtlichen Gespräch kann Oogway Shifu überzeugen, 
+					sich die Ausbildung von Po zum Drachenkrieger zu Herzen zu nehmen; daraufhin tritt der alte Meister seine letzte große Reise an. 
+					Schließlich erkennt Shifu, wie er Po erfolgreich trainieren kann: Er beobachtet den dicken Panda, wie dieser unter instinktivem Einsatz 
+					akrobatischer Fähigkeiten auf der Suche nach Essen die Schränke in der Vorratskammer aufbricht. Mit Hilfe von Leckerbissen als Kampfpreis 
+					kann Pos Talent geweckt werden. Die beiden beginnen mit dem Training, und Po steigert sich in nur kurzer Zeit zum talentierten Kung-Fu-Kämpfer.
+					Nach seinem Ausbruch aus dem speziell für ihn erbauten Chorh-Gom-Gefängnis macht sich Tai Lung auf den Weg, 
+					um Rache zu nehmen und den Titel des angesehenen Drachenkriegers zu beanspruchen. Die Furiosen Fünf werfen sich ihm entgegen, werden aber schmählich geschlagen. 
+					Um gegen Tai Lung zu bestehen, bekommt Po die heilige Drachenrolle, die nur der Drachenkrieger lesen darf und die das tiefste Geheimnis des Kung Fu enthalten soll. 
+					Doch der einzige Inhalt der Rolle ist seltsamerweise eine blanke, goldene Spiegeloberfläche.
+					Verzweifelt darüber, dass selbst das große Geheimnis der Drachenrolle sie im Stich gelassen hat, befiehlt Shifu die Evakuierung des Dorfes; 
+					er allein wird sich Tai Lung, seinem größten Fehler, stellen. Po gesellt sich zu seinem Vater, und dieser verrät ihm noch die geheime Zutat 
+					seiner Geheim-Nudelsuppe: „Nichts“ – denn damit etwas etwas Besonderes wird, muss man nur glauben, dass es besonders ist. 
+					Durch diese Worte versteht Po die Weisheit hinter der Drachenrolle. Er eilt Shifu im letzten Moment zu Hilfe, als dieser schon vom Kampf mit Tai Lung geschwächt ist. 
+					Mit seiner neu gewonnenen Zuversicht, unter Einsatz seines kräftigen Körperbaus und schließlich durch Anwendung des geheimnisvollen Wuxi-Fingergriffs 
+					gelingt es ihm, Tai Lung zu vernichten. Die Dorfbewohner können in ihr Dorf zurückkehren, die Furiosen Fünf erkennen Po als einen der Ihren an, 
+					und Shifu findet endlich nach Jahren seinen inneren Frieden wieder.</p>
+			</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function toggleBlock(contentId) {
+        var content = document.getElementById(contentId);
+        var arrow = document.getElementById(contentId.replace("-content", "-arrow"));
+
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;"; // Pfeil nach oben
+        } else {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;"; // Pfeil nach unten
+        }
+    }
+</script>
+
+</body>
+</html>
